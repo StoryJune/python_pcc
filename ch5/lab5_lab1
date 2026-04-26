@@ -1,0 +1,20 @@
+#Jason Li
+#Oct 9 2025
+
+#ch5 lab1
+
+#Making functions
+
+def find_sum(n): 
+    sum = 0
+    for i in range(n + 1):                      #n + 1 cus sum starts at 0
+        sum += i
+    return sum
+
+def main(): 
+    intPut = int(input("Enter an integer: "))   #ask for input
+    result = find_sum(intPut)                   #finds result
+    print(result)                               #prints result
+    return None
+
+main()

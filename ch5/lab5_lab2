@@ -1,0 +1,29 @@
+#Jason Li
+#Oct 14 2025
+
+#ch5 lab2
+
+#Making functions
+
+def evaluate(strOp, firstInt, secInt):
+    match strOp:
+        case("+"):
+            return firstInt + secInt
+        case("-"):
+            return firstInt - secInt
+        case("*"):
+            return firstInt * secInt
+        case("/"):
+            return firstInt / secInt
+        case("**"):
+            return firstInt ** secInt
+        case _:
+            return "Operator not valid"
+
+def main():
+    operator = input("Enter operator (+, -, *, /, **): ")
+    intA = int(input("Enter the first integer: "))
+    intB = int(input("Enter the second integer: "))
+    print(f"result: {evaluate(operator, intA, intB)}")
+
+main()

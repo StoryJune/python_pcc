@@ -1,0 +1,28 @@
+#Jason Li
+#10/22/25
+
+#Alternating sum of list
+
+def alternatingSum(list):
+    sum = 0
+    i = 0
+    for i in range(len(list)):      #for every value in the list
+        value = int(list[i])        #first convert the value to int or else we cant have the sum
+        if i % 2 == 0:              #while the index is even
+            sum += value            #add to sum
+        else:                       #if not
+            sum -= value            #subtract
+    return sum
+
+
+def main():
+    list = []
+    while True:             
+        inputValue = input("Enter values (blank line to quit): ")   #getting input
+        if inputValue == "":                                        #if blank, break out of loop
+            break
+        list.append(inputValue)                                     #if not, save to the list
+    sum = alternatingSum(list)                                      #call alternatingsum function
+    print(f"The alternating sum is {sum:.1f}")
+
+main()

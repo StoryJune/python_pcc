@@ -1,0 +1,23 @@
+#10/29/25
+#Jason Li 
+
+#intersection
+
+listA = [1, 5, 6, 8, 5]
+listB = [3, 4, 1, 5, 1, 7]
+listC = ['red', 'white', 'red']
+listD = ['green', 'white', 'yellow']
+
+def lists_intersection(list1, list2):
+    result = []
+    for item in list1:
+        if item in list2 and item not in result:
+            result.append(item)
+    return result
+
+def main():
+    print(f"List A is {listA}")
+    print(f"List B is {listB}")
+    print(f"The intersection of two list is {lists_intersection(listA, listB)}")
+
+main()

@@ -1,0 +1,29 @@
+#Jason Li
+#10/24/25
+
+#list and tables
+
+def count_scores(table, dailyAvgScore):
+    count = 0                               
+    for row in table:                       #for every row, or basically list of list
+        for score in row:                   #this is checking column 
+            if score > dailyAvgScore:       #suppose if we're finding if the score is lower than daily we add < statement?
+                count += 1                  #count how far part is the score in our table and the daily avg score
+    return count                            
+
+def main():
+    scores = [                              #our prepopulated table
+    [75, 78, 2],
+    [44, 72, 17],
+    [92, 83, 61],
+    [22, 28, 45]]
+    
+    dailyAvg = input("Enter the daily average scvore; a number between 1 and 100: ")
+    dailyAvg = int(dailyAvg)                                                                 #convert to int 
+
+    if dailyAvg >= 1 and dailyAvg <= 100:                                                     #checking for edge cases
+        print(f"The number of scores higher than the daily average score are: {count_scores(scores, dailyAvg)}")
+    else: 
+        print("Invalid daily score")
+
+main()

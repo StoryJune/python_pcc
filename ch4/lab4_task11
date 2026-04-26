@@ -1,0 +1,23 @@
+#Jason Li
+#Sept 30 2025
+
+#ch4 lab3
+
+#Testing Collatz Conjecture Algorithm
+
+from random import random, randint 
+
+#random generated number between 1 to 20
+n = randint(1, 20)
+steps = 0
+
+#while the number generated is not 1
+while n != 1:
+    if n % 2 == 0:      #when the number is even
+        n = n // 2      #halving n 
+    else:               #when the number is odd
+        n = 3 * (n) + 1 #multipling by 3 and adding by 1 
+    print(n)
+    steps += 1
+
+print(f"Total stopping time is {steps}")

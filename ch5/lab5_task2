@@ -1,0 +1,30 @@
+#Jason Li
+#Oct 9 2025
+
+#ch5 lab1
+
+#Making functions
+
+
+def evaluate(op, intA, intB):
+    if op == "+":
+        print(intA + intB)
+    elif op == "-":
+        print(intA - intB)
+    elif op == "*":
+        print(intA * intB)
+    elif op == "/":
+        print(intA / intB)
+    elif op == "**":
+        print(intA ** intB)
+    else:
+        print("Input not valid")
+    
+
+def main():
+    operator = input("Enter operator (+, -, *, /, **): ")
+    intA = int(input("Enter the first integer: "))
+    intB = int(input("Enter the second integer: "))
+    evaluate(operator, intA, intB)
+
+main()

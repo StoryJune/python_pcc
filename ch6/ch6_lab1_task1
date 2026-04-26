@@ -1,0 +1,44 @@
+#Jason Li
+#10/22/25
+
+#Reversing list 
+
+listA = [1, 2, 3, 4, 5, 6]
+listB = [4, 6, 8, 6, 12]
+listC = [5, 10, 15, 200, 25, 50, 20]
+listD = ["m", "na", "i", "Ke"]
+listE = ["y", "me", "s", "lly"]
+
+def reverseList(list):
+    reversedList = list[::-1] #start at index 0, end at index 0, traversal backwards
+    print(reversedList)
+
+def delete(list, toDelete):
+    filteredList = [i 
+                    for i in list 
+                    if i != toDelete]
+    print(filteredList)
+
+def replace(list, toReplace, replaceValue):
+    replacedList = []
+    i = 0 
+    while i < len(list):
+        if list[i] == toReplace:                    #if list at this index is the value to be replaced
+            replacedList.append(replaceValue)       #change the value to the replaced value and add the replaced list
+        else:                                       #if not
+            replacedList.append(list[i])            #just add the value of the index to the replaced list
+        i += 1
+
+    print(replacedList)
+
+def concatenate(list1, list2):
+    jointList = []                                  #have a empty list
+    for i in range(len(list1)):
+        jointList.append(list1[i] + list2[i])       #the empty list is the index of list1 added with + list2      
+    print(jointList)
+
+
+reverseList(listA)
+delete(listB, 6)
+replace(listC, 20, 200)
+concatenate(listD, listE)

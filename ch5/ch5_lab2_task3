@@ -1,0 +1,26 @@
+#Jason Li
+#Oct 14 2025
+
+#ch5 lab2
+
+#Making functions
+
+def digits(num):
+    return len(num)
+
+def firstDigit(num):
+    return num[0]
+
+def lastDigit(num):
+    return num[-1]
+
+def printing(num):
+    print(f"The number of digit in {num} is: {digits(num)}")
+    print(f"The first digit in {num} is: {firstDigit(num)}")
+    print(f"The second digit in {num} is: {lastDigit(num)}")
+
+def main():
+    posInt = input("Enter any positive integer: ")
+    printing(posInt)
+
+main()

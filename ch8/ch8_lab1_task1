@@ -1,0 +1,29 @@
+#10/29/25
+#Jason Li 
+
+#unions
+
+listA = [1, 5, 6, 8, 5]
+listB = [3, 4, 1, 5, 1, 7]
+listC = ['red', 'white', 'red']
+listD = ['green', 'white', 'yellow']
+
+def lists_union(list1, list2):
+    unionList = []
+
+    for i in list1:
+        if i not in unionList:
+            unionList.append(i)
+
+    for i in list2:
+        if i not in unionList:
+            unionList.append(i)
+
+    return unionList
+
+def main():
+    print(f"List A is {listC}")
+    print(f"List B is {listD}")
+    print(f"The union of two list is {lists_union(listC, listD)}")
+
+main()

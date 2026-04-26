@@ -1,0 +1,49 @@
+#Set activity
+#Experimenting with sets
+#Eva and Jason
+
+cast = {"lance", "gummy", "sinny"}
+
+mySet = set(["Mary", "Larry", "Carrie"])
+
+
+
+for c in (cast):
+    print(c)
+
+print("*" *20)
+
+
+for c in sorted(cast):
+    print(c)
+
+print("*" *20)
+cast.add("minny")
+print("the length of the set after adding minny is: ", len(cast))
+
+
+print("*" *20)
+cast.add("lance")
+print("the length of the set after adding lance is: ", len(cast))   #lance gummy sinny minny
+
+print("*" *20)
+
+cast.discard("sinny")       #we removed sinny -> lance gummy minny
+cast.discard("happy")       
+
+
+for c in (cast):            #lance gummy minny
+    print(c)    
+
+try:    
+    cast.remove("minny")    #lance gummy    
+    cast.remove("micky")       
+
+except Exception:   
+    print("Element not avaliable to remove")
+
+print("continuing")
+
+
+cast.clear()
+print("the size of the set is: ", len(cast))

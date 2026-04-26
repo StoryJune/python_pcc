@@ -1,0 +1,26 @@
+#Testing dictionary 
+#10/29/25
+#Jason Li, Eungyeol Lee
+
+myDictionary = {}
+print("the length of the dictionary is", len(myDictionary))
+anotherDictionary = {"May":2145523, "Cory":3559912, "Sara":4329898}
+
+#adding elements
+myDictionary["Alan"] = 4533344
+myDictionary["Khoi"] = 343233
+
+#adding elements 
+anotherDictionary["Ellen"] = 4349098
+
+print("the length of the dictionary is", len(myDictionary))
+print("the length of the dictionary is", len(anotherDictionary))
+
+print("May's number is ", anotherDictionary["May"])
+
+
+for key in anotherDictionary:
+    print("key:", end="")
+    print(key)
+    print("value:",end="")
+    print(anotherDictionary[key])
